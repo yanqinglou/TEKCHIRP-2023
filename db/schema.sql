@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS tecchirp_db;
+CREATE DATABASE tecchirp_db;

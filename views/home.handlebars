@@ -1,0 +1,10 @@
+<h1>Homepage</h1>
+<h2>All Chirps</h2>
+
+
+{{#each allChirps}}
+<section class="chirp-box">
+    <h2>{{User.email}} Chriped</h2>
+    <p>  text: {{chirp}}</p>
+</section>
+{{/each}}
