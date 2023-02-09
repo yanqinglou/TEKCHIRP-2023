@@ -2,21 +2,40 @@
     box-sizing: border-box;
     margin:0;
     padding:0;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: 'Quicksand', sans-serif;
 }
 
-header,footer {
-    height:15vh;
-    background:salmon;
+header{
+    height:30vh;
+    text-align: center;
+    border-bottom: 3px solid #023047
+}
+
+header h1{
+    padding:1em;
+    color:#023047;
+    font-size:300%;
+}
+
+header div{
+
     display: flex;
     justify-content: space-around;
+    color:#023047;
 }
 
-header >a {
-    font-size:2em;
+div >a {
+    padding: 1em 1em 0 1em;
+    margin:1em;
+    font-size:1em;
+    transition:0.5s;
 }
 
 main {
     min-height: 70vh;
-    background:cornflowerblue
+}
+
+div >a:hover{
+    border-bottom: 5px solid #FFB703;
 }
