@@ -36,6 +36,11 @@ main {
     min-height: 70vh;
 }
 
+a{
+    text-decoration: none;
+    color:inherit
+}
+
 .form{
     margin-top: 3em;
     display: flex;
@@ -87,6 +92,7 @@ button{
 .chirp-box{
     padding:1em;
     border:1px solid #023047;
+
 }
 
 footer{
@@ -105,4 +111,8 @@ div >a:hover{
 .form button:hover,:active{
     background-color: #023047;
     color: #ffff;
+}
+
+.chirp-box:hover,:active{
+    background-color: #ffff;
 }
