@@ -7,13 +7,13 @@
 }
 
 header{
-    height:30vh;
+    height:max-content;
     text-align: center;
     border-bottom: 3px solid #023047
 }
 
 header h1{
-    padding:1em;
+    padding:0.5em;
     color:#023047;
     font-size:300%;
 }
@@ -36,6 +36,42 @@ main {
     min-height: 70vh;
 }
 
+.form{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        color:#023047;
+    padding:1em;
+
+    margin-left: 30%;
+    margin-right: 30%;
+    /* width: max-content; */
+}
+
+.form input{
+    padding:1em;
+    width: 60%;
+    margin:1em;
+}
+
+.form button{
+        margin:1em;
+    padding:1em;
+    width:30%;
+        color:#023047;
+        border-radius: 1em;
+}
+
 div >a:hover{
     border-bottom: 5px solid #FFB703;
+}
+
+.form:hover,:active{
+        background-color:  hsl(206, 14%, 90%);
+}
+
+.form button:hover,:active{
+    background-color: #023047;
+    color: #ffff;
 }
