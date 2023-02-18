@@ -49,13 +49,25 @@ main {
     /* width: max-content; */
 }
 
+.add-chirp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        color:#023047;
+    padding:1em;
+
+    margin-left: 30%;
+    margin-right: 30%;
+    /* width: max-content; */
+}
+
 .form input{
     padding:1em;
     width: 60%;
     margin:1em;
 }
 
-.form button{
+button{
         margin:1em;
     padding:1em;
     width:30%;
@@ -63,11 +75,30 @@ main {
         border-radius: 1em;
 }
 
+.page-header{
+    padding: 1em;
+}
+
+#chirp-input{
+    width:70%;
+    height:80%;
+}
+
+.chirp-box{
+    padding:1em;
+    border:1px solid #023047;
+}
+
+footer{
+    border-top: 1px solid #023047;
+    text-align: center;
+}
+
 div >a:hover{
     border-bottom: 5px solid #FFB703;
 }
 
-.form:hover,:active{
+.form,.add-chirp:hover,:active{
         background-color:  hsl(206, 14%, 90%);
 }
 

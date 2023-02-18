@@ -1,14 +1,21 @@
-<h1>Welcome back, {{email}}!</h1>
-<h2>Add a chirp</h2>
-<form id="new-chirp-form">
+<h1 class="page-header">Welcome back, {{email}}!</h1>
+
+<form class="add-chirp" id="new-chirp-form">
+    <h2>Add a chirp</h2>
     <textarea id="chirp-input"></textarea>
     <button>Chirp!</button>
 </form>
-<h2>my chirps</h2>
+
+<div class = "add-chirp">
+    <h2>My chirps</h2>
 {{#each Chirps}}
     <section class="chirp-box">
     <p>  text: {{chirp}}</p>
+    <a href="/profile">delete</a>
 </section>
 {{/each}}
+
+</div>
+
 
 <script src="/js/profile.js"></script>
