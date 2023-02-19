@@ -15,12 +15,11 @@
       <p>{{chirp}}</p>
       <div>
         <a name={{id}} href="/profile">Delete</a>
-        <a name={{id}} href="/profile">Update</a>
+        <a class="modal-trigger" name={{id}} href="/chirp/update/{{id}}"">Update</a>
       </div>
     </section>
     <br />
   {{/each}}
-
 </div>
 
-<script src="/js/profile.js"></script>
+<script type="module" src="/js/profile.js"></script>

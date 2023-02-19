@@ -105,11 +105,11 @@ div >a:hover{
     border-bottom: 5px solid #FFB703;
 }
 
-.form,.add-chirp:hover,:active{
+.form,.add-chirp,.chirp-box:hover,:active{
         background-color:  hsl(206, 14%, 90%);
 }
 
-.form button:hover,:active{
+button:hover,:active{
     background-color: #023047;
     color: #ffff;
 }

@@ -21,6 +21,19 @@ router.get("/login",(req,res)=>{
 router.get("/signup",(req,res)=>{
     res.render("signup")
 })
+
+router.get("/chirp/update/:id",(req,res)=>{
+    if(!req.session.userId){
+        return res.redirect("/login")
+    }
+    Chirp.findByPk(req.params.id,{
+
+    }).then(chirpData=>{
+        const hbsData = chirpData.toJSON();
+        res.render("update-chirp",hbsData)
+    })
+
+})
 router.get("/profile",(req,res)=>{
     if(!req.session.userId){
         return res.redirect("/login")

@@ -39,6 +39,25 @@ router.post("/",(req,res)=>{
    })
 })
 
+//udpate chirp
+router.post("/:id",(req,res)=>{
+   if(!req.session.userId){
+      return res.status(403).json({msg:"login first post"})
+   }
+   console.log(req.body);
+   Chirp.update(
+      {chirp:req.body.chirp},{where:{
+         id:req.params.id
+     }}
+    //TODO: read userid from session data instead of from req.body
+   ).then(chirpData=>{
+    res.json(chirpData)
+   }).catch(err=>{
+    console.log(err);
+    res.status(500).json({msg:"oh noes!",err})
+   })
+})
+
 //TODO: BONUS: add a protected route to delete a chirp (/api/chirps/:id) so that only the user who created the chirp can delete it
 router.delete("/:id",(req,res)=>{
    if(!req.session.userId){
