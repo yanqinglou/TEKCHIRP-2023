@@ -18,3 +18,22 @@ document.querySelector("#new-chirp-form").addEventListener("submit",e=>{
         }
     })
 })
+
+document.addEventListener("click",(e)=>{
+    if (e.target.textContent == "Delete"){
+        let id =e.target.name
+            fetch(`/api/chirps/${id}`,{
+                method:"DELETE",
+                headers:{
+                    "Content-Type":"application/json"
+                }
+            }).then(res=>{
+                if(res.ok){
+                   location.reload()
+                } else {
+                    alert("trumpet sound")
+                }
+            })
+        }
+})
+
